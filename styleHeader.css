@@ -1,0 +1,55 @@
+header {
+  display: flex;
+  background-color: rgba(211, 211, 211, 0.596);
+  justify-content: space-between;
+  height: 100px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgba(174, 167, 167, 0.114);
+  padding-bottom: 30px;
+}
+.search {
+  align-self: center;
+  margin-right: 5%;
+  display: flex;
+}
+.search button {
+  margin-left: 5px;
+}
+h1 {
+  font-size: 28px;
+  margin-left: 3%;
+  align-self: center;
+  color: rgb(38, 159, 159);
+  margin-top: 0;
+}
+.bottmMenu {
+  display: flex;
+  background-color: rgb(67, 66, 66);
+  color: azure;
+  box-sizing: border-box;
+}
+.item {
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.active {
+  border-bottom: 6px solid rgb(38, 159, 159);
+  border-left: 1px solid rgba(240, 255, 255, 0.459);
+  border-right: 1px solid rgba(240, 255, 255, 0.459);
+}
+.error {
+  display: none;
+}
+.five-day {
+  display: none;
+}
+
+.today-header-menu {
+  margin-left: 10vh;
+}

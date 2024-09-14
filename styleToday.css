@@ -1,0 +1,70 @@
+.today {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.today-item-box {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 7vh;
+  background-color: rgb(255, 255, 255);
+  padding: 2vh;
+}
+.today-item-box-top-content {
+  color: rgb(38, 159, 159);
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+}
+.today-item-box-top-content p {
+  font-size: 2.5vh;
+}
+.currentWeather-main-content-box {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8%;
+  padding-right: 15%;
+  margin-top: 1vh;
+}
+.currentWeather-main-content-box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.currentWeather-feels p:first-child {
+  font-size: 55px;
+  font-weight: bolder;
+  margin: 0;
+}
+.gray-text {
+  color: gray;
+}
+
+/* //hourly */
+.dayHours p:first-child {
+  font-size: 2.5vh;
+  color: rgb(38, 159, 159);
+}
+.dayHours table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.dayHours table th {
+  text-align: left;
+  height: 6vh;
+  color: rgb(113, 111, 111);
+}
+.fs140 {
+  font-size: 140%;
+}
+td {
+  text-align: center;
+}
+
+.bordered {
+  border-bottom: 1px solid gray;
+}

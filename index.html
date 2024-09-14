@@ -4,40 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styleHeader.css">
+    <link rel="stylesheet" href="styleToday.css">
+    <link rel="icon" type="image/x-icon" href="/img/iconWeather.png">
+    <title>Weather</title>
 </head>
 
 <body>
     <header>
-        <h1>MY WEATHER</h1>
+        <h1>WEATHER</h1>
         <div class="search">
-            <input type="text" name="" id="" placeholder="City">
+            <div class="autocomplete">
+                <input type="text" name="" id="city" placeholder="City" value="Kyiv">
+            </div>
             <button>search</button>
         </div>
     </header>
     <div class="bottmMenu">
-        <div class="item">
-            <button>
-                <p>Today</p>
-            </button>
+        <div class="item today-header-menu active" id="today">
+            <p>Today</p>
         </div>
-        <div class="item">
-            <button>
-                <p>5-day forecast</p>
-            </button>
-
+        <div class="item" id="forecast">
+            <p>5-day forecast</p>
         </div>
     </div>
 
     <section class="today">
+        <div class="currentWeather today-item-box">
+            <div class="today-item-box-top-content">
+                <p>CURRENT WEATHER</p>
+                <p id="currentDate">30-30-2024</p>
+            </div>
+            <div class="currentWeather-main-content-box">
+                <div class="currentWeather-main-content-box-item">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" id="currentWeatherIcon">
+                    <p id="currentWeatherDesc" class="gray-text"></p>
+                </div>
+                <div class="currentWeather-main-content-box-item currentWeather-feels">
+                    <p id="temp">29&#176;C</p>
+                    <p class="gray-text" id="feelsLike">Real Feel 30&#176;</p>
+                </div>
+                <div class="currentWeather-main-content-box-item">
+                    <p class="gray-text" id="currentWeather-sunrise">Sunrise</p>
+                    <p class="gray-text" id="currentWeather-sunset">Sunset</p>
+                    <p class="gray-text" id="currentWeather-sunDuration">Duration</p>
+                </div>
+            </div>
+        </div>
 
+        <div class="dayHours today-item-box">
+            <p>HOURLY</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="fs140">TODAY</th>
+                        <td class="day-hourly-table-time-item">7 PM</th>
+                        <td class="day-hourly-table-time-item">8 PM</th>
+                        <td class="day-hourly-table-time-item">9 PM</th>
+                        <td class="day-hourly-table-time-item">10 PM</th>
+                        <td class="day-hourly-table-time-item">11 PM</th>
+                        <td class="day-hourly-table-time-item">12 PM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="icons">
+                        <td></td>
+                        <td><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"
+                                id="day-hourly-table-icon"></td>
+                        <td><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"
+                                id="day-hourly-table-icon"></td>
+                        <td><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"
+                                id="day-hourly-table-icon"></td>
+                        <td><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"
+                                id="day-hourly-table-icon"></td>
+                        <td><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"
+                                id="day-hourly-table-icon"></td>
+                        <td><img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"
+                                id="day-hourly-table-icon"></td>
+                    </tr>
+                    <tr class="bordered">
+                        <th>Forecast</th>
+                        <td id="day-hourly-table-forecast">Sunny</td>
+                        <td id="day-hourly-table-forecast">Sunny</td>
+                        <td id="day-hourly-table-forecast">Sunny</td>
+                        <td id="day-hourly-table-forecast">Sunny</td>
+                        <td id="day-hourly-table-forecast">Sunny</td>
+                        <td id="day-hourly-table-forecast">Sunny</td>
+                    </tr>
+                    <tr class="bordered">
+                        <th>Temp (&#176;C)</th>
+                        <td id="day-hourly-table-Temp">7</td>
+                        <td id="day-hourly-table-Temp">7</td>
+                        <td id="day-hourly-table-Temp">7</td>
+                        <td id="day-hourly-table-Temp">7</td>
+                        <td id="day-hourly-table-Temp">7</td>
+                        <td id="day-hourly-table-Temp">7</td>
+                    </tr>
+                    <tr class="bordered">
+                        <th>RealFeel</th>
+                        <td id="day-hourly-table-feelslike">7</td>
+                        <td id="day-hourly-table-feelslike">7</td>
+                        <td id="day-hourly-table-feelslike">7</td>
+                        <td id="day-hourly-table-feelslike">7</td>
+                        <td id="day-hourly-table-feelslike">7</td>
+                        <td id="day-hourly-table-feelslike">7</td>
+                    </tr>
+                    <tr>
+                        <th>Wind (km/h)</th>
+                        <td id="day-hourly-table-wind">7</td>
+                        <td id="day-hourly-table-wind">7</td>
+                        <td id="day-hourly-table-wind">7</td>
+                        <td id="day-hourly-table-wind">7</td>
+                        <td id="day-hourly-table-wind">7</td>
+                        <td id="day-hourly-table-wind">7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <section class="error"></section>
-    <section class="5-day"></section>
+    <section class="error">
+        <p>ERROR</p>
+    </section>
+    <section class="five-day">
+        <p>5-DAY</p>
+    </section>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
