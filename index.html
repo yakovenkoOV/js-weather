@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleHeader.css">
     <link rel="stylesheet" href="styleToday.css">
+    <link rel="stylesheet" href="/css/errorstyle.css">
+    <link rel="stylesheet" href="/css/fivedayforecaststyle.css">
     <link rel="icon" type="image/x-icon" href="/img/iconWeather.png">
     <title>Weather</title>
 </head>
@@ -17,14 +19,14 @@
             <div class="autocomplete">
                 <input type="text" name="" id="city" placeholder="City" value="Kyiv">
             </div>
-            <button>search</button>
+            <button id="searchButt">search</button>
         </div>
     </header>
     <div class="bottmMenu">
-        <div class="item today-header-menu active" id="today">
+        <div class="item-bottom-menu today-header-menu active" id="today">
             <p>Today</p>
         </div>
-        <div class="item" id="forecast">
+        <div class="item-bottom-menu" id="forecast">
             <p>5-day forecast</p>
         </div>
     </div>
@@ -58,12 +60,12 @@
                 <thead>
                     <tr>
                         <th class="fs140">TODAY</th>
-                        <td class="day-hourly-table-time-item">7 PM</th>
-                        <td class="day-hourly-table-time-item">8 PM</th>
-                        <td class="day-hourly-table-time-item">9 PM</th>
-                        <td class="day-hourly-table-time-item">10 PM</th>
-                        <td class="day-hourly-table-time-item">11 PM</th>
-                        <td class="day-hourly-table-time-item">12 PM</th>
+                        <td class="day-hourly-table-time-item" id="day-hourly-table-time">7 PM</th>
+                        <td class="day-hourly-table-time-item" id="day-hourly-table-time">8 PM</th>
+                        <td class="day-hourly-table-time-item" id="day-hourly-table-time">9 PM</th>
+                        <td class="day-hourly-table-time-item" id="day-hourly-table-time">10 PM</th>
+                        <td class="day-hourly-table-time-item" id="day-hourly-table-time">11 PM</th>
+                        <td class="day-hourly-table-time-item" id="day-hourly-table-time">12 PM</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -124,13 +126,126 @@
     </section>
 
     <section class="error">
-        <p>ERROR</p>
+        <div class="errorBlock">
+            <img src="./img/404-page-not-found-illustration-2048x998-yjzeuy4v.png" alt="" srcset="">
+        </div>
+        <h2>ERROR : incorrect city name</h2>
     </section>
     <section class="five-day">
-        <p>5-DAY</p>
+        <div class="five-day-item-box">
+            <div class="grid-item-five-day border-right grid-item-five-day-active" id="first-item">
+                <p id="day-of-week"></p>
+                <p class="gray-text" id="date-five-dat-forecast"></p>
+                <img src="" alt="weather icon" id="icon-five-forecast">
+                <p class="deg" id="degree-five-forecast"></p>
+                <p class="gray-text" id="weather-desc-five-forecast"></p>
+            </div>
+            <div class="grid-item-five-day border-right" id="second-item">
+                <p id="day-of-week"></p>
+                <p class="gray-text" id="date-five-dat-forecast"></p>
+                <img src="" alt="weather icon" id="icon-five-forecast">
+                <p class="deg" id="degree-five-forecast"></p>
+                <p class="gray-text" id="weather-desc-five-forecast"></p>
+            </div>
+            <div class="grid-item-five-day border-right" id="third-item">
+                <p id="day-of-week"></p>
+                <p class="gray-text" id="date-five-dat-forecast"></p>
+                <img src="" alt="weather icon" id="icon-five-forecast">
+                <p class="deg" id="degree-five-forecast"></p>
+                <p class="gray-text" id="weather-desc-five-forecast"></p>
+            </div>
+            <div class="grid-item-five-day border-right" id="fourth-item">
+                <p id="day-of-week"></p>
+                <p class="gray-text" id="date-five-dat-forecast"></p>
+                <img src="" alt="weather icon" id="icon-five-forecast">
+                <p class="deg" id="degree-five-forecast"></p>
+                <p class="gray-text" id="weather-desc-five-forecast"></p>
+            </div>
+            <div class="grid-item-five-day" id="fifth-item">
+                <p id="day-of-week"></p>
+                <p class="gray-text" id="date-five-dat-forecast"></p>
+                <img src="" alt="weather icon" id="icon-five-forecast">
+                <p class="deg" id="degree-five-forecast"></p>
+                <p class="gray-text" id="weather-desc-five-forecast"></p>
+            </div>
+
+        </div>
+
+        <!-- HOURLY -->
+        <div class="dayHours today-item-box">
+            <p>HOURLY</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="fs140">TODAY</th>
+                        <td class="day-hourly-table-time-item" id="selected-item-time">
+                            </th>
+                        <td class="day-hourly-table-time-item" id="selected-item-time">
+                            </th>
+                        <td class="day-hourly-table-time-item" id="selected-item-time">
+                            </th>
+                        <td class="day-hourly-table-time-item" id="selected-item-time">
+                            </th>
+                        <td class="day-hourly-table-time-item" id="selected-item-time">
+                            </th>
+                        <td class="day-hourly-table-time-item" id="selected-item-time">
+                            </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="icons">
+                        <td></td>
+                        <td><img src="" id="selected-item-icon"></td>
+                        <td><img src="" id="selected-item-icon"></td>
+                        <td><img src="" id="selected-item-icon"></td>
+                        <td><img src="" id="selected-item-icon"></td>
+                        <td><img src="" id="selected-item-icon"></td>
+                        <td><img src="" id="selected-item-icon"></td>
+                    </tr>
+                    <tr class="bordered">
+                        <th>Forecast</th>
+                        <td id="selected-item-desc"></td>
+                        <td id="selected-item-desc"></td>
+                        <td id="selected-item-desc"></td>
+                        <td id="selected-item-desc"></td>
+                        <td id="selected-item-desc"></td>
+                        <td id="selected-item-desc"></td>
+                    </tr>
+                    <tr class="bordered">
+                        <th>Temp (&#176;C)</th>
+                        <td id="selected-item-temp"></td>
+                        <td id="selected-item-temp"></td>
+                        <td id="selected-item-temp"></td>
+                        <td id="selected-item-temp"></td>
+                        <td id="selected-item-temp"></td>
+                        <td id="selected-item-temp"></td>
+                    </tr>
+                    <tr class="bordered">
+                        <th>RealFeel</th>
+                        <td id="selected-item-realfeel"></td>
+                        <td id="selected-item-realfeel"></td>
+                        <td id="selected-item-realfeel"></td>
+                        <td id="selected-item-realfeel"></td>
+                        <td id="selected-item-realfeel"></td>
+                        <td id="selected-item-realfeel"></td>
+                    </tr>
+                    <tr>
+                        <th>Wind (km/h)</th>
+                        <td id="selected-item-wind"></td>
+                        <td id="selected-item-wind"></td>
+                        <td id="selected-item-wind"></td>
+                        <td id="selected-item-wind"></td>
+                        <td id="selected-item-wind"></td>
+                        <td id="selected-item-wind"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </section>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <!-- <script type="module" src="controller.js"></script> -->
 
 </body>
 

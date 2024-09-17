@@ -1,18 +1,21 @@
+:root {
+  --main-blue-color: rgb(38, 159, 159);
+}
 .today {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding-left: 6%;
   padding-right: 6%;
 }
 .today-item-box {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid rgba(128, 128, 128, 0.335);
   margin-top: 7vh;
   background-color: rgb(255, 255, 255);
   padding: 2vh;
 }
 .today-item-box-top-content {
-  color: rgb(38, 159, 159);
+  color: var(--main-blue-color);
   display: flex;
   justify-content: space-between;
   letter-spacing: 2px;
@@ -45,7 +48,7 @@
 /* //hourly */
 .dayHours p:first-child {
   font-size: 2.5vh;
-  color: rgb(38, 159, 159);
+  color: var(--main-blue-color);
 }
 .dayHours table {
   width: 100%;

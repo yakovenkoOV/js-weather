@@ -1,0 +1,47 @@
+:root {
+  --main-blue-color: rgb(38, 159, 159);
+}
+.five-day-item-box {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.335);
+  margin-top: 5vh;
+  background-color: rgb(255, 255, 255);
+  /* padding: 2vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.five-day {
+  flex-direction: column;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.grid-item-five-day {
+  padding: 10%;
+  background-color: rgba(153, 153, 153, 0);
+}
+.grid-item-five-day p:first-child {
+  color: var(--main-blue-color);
+  font-size: 130%;
+  margin: 0;
+  font-weight: bold;
+}
+.border-right {
+  border-right: 3px solid gray;
+}
+.grid-item-five-day:hover {
+  background-color: rgba(118, 117, 117, 0.335);
+}
+.deg {
+  font-size: 230%;
+  font-weight: bold;
+}
+.grid-item-five-day img {
+  width: 100px;
+  margin-left: 10%;
+}
+.grid-item-five-day-active {
+  border-bottom: 6px solid var(--main-blue-color);
+}
+.grid-item-five-day p:last-child {
+  font-size: 110%;
+}
